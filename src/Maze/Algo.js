@@ -1,9 +1,9 @@
-// import React from 'react';
+import {useState} from 'react';
 import Maze from './Maze';
 import './maze.css';
 
 function Algo (){
-
+    const [displayAns,setDisplayAns] = useState(false);
     var arr = [
         [3,1,1,1],
         [0,1,0,1],
@@ -36,7 +36,9 @@ function Algo (){
 
     return (<>
     <Maze displayMiddle = {5} maze={arr}/>
-    {solution.map((ans_arr)=>{return <Maze displayMiddle = {5} maze={ans_arr}/>})}
+    <button onClick={()=>{setDisplayAns(!displayAns)}} >view answers</button>
+    {displayAns?solution.length===0?<h2>NO ANSWER IS POSSIBLE</h2>:'':''}
+    {displayAns?solution.map((ans_arr)=>{return <Maze displayMiddle = {5} maze={ans_arr}/>}):<></>}
     </>);
 }
 
