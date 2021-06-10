@@ -1,0 +1,30 @@
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    /* margin-left:auto;
+    margin-right:auto; */
+    /* font-size: xx-large; */
+  }
+
+  td {
+    width: 70px;
+    height: 70px;
+  }
+
+.redCell{
+      background-color: red;
+  }
+.ratCell{
+    background-color: aqua;
+    }
+.foodCell{
+    background-color:saddlebrown;
+}
+.greenCell{
+    background-color:green;
+}
+.middle{
+    margin-left:40%;
+    margin-right:40%;
+    margin-top: 10%;
+}
